@@ -1,0 +1,9 @@
+{
+  "name": "language-zapper",
+  "version": "0.0.1",
+  "description": "Syntax highlighting for Zapper",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  }
+}

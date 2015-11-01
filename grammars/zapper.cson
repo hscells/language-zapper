@@ -1,0 +1,42 @@
+'scopeName': 'source.zap'
+'name': 'zapper'
+'fileTypes': ['zap']
+'patterns': [
+  {
+    'match': '[0-9]'
+    'name': 'constant.numeric.zapper'
+  }
+  {
+    'match': '\\b(?i:list|first|rest|conj|length|nth|let|import|print|println)\\b'
+    'name': 'support.function.zapper'
+  }
+  {
+    'match': '\\b(?i:cond|fn|return)\\b'
+    'name': 'keyword.control.zapper'
+  }
+  {
+    'match': '\\b(?i:=|<|>|<=|>=|\\+|\\*|\\/|\\/)\\b'
+    'name': 'keyword.operator.zapper'
+  }
+  {
+    'match': '\\b(?i:True|False)\\b'
+    'name': 'constant.language.zapper'
+  }
+  {
+  'begin': '"'
+  'beginCaptures':
+    '0':
+      'name': 'punctuation.definition.string.begin.zapper'
+  'end': '"'
+  'endCaptures':
+    '0':
+      'name': 'punctuation.definition.string.end.zapper'
+  'name': 'string.quoted.double.zapper'
+  'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.zapper'
+      }
+    ]
+  }
+]
