@@ -2,13 +2,13 @@
   "name": "language-zapper",
   "main": "./lib/language-zapper",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "A syntax highlighter for Zapper",
   "keywords": [
   ],
   "activationCommands": {
     "atom-workspace": "language-zapper:toggle"
   },
-  "repository": "https://github.com/atom/language-zapper",
+  "repository": "https://github.com/hscells/language-zapper",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
