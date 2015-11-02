@@ -7,19 +7,19 @@
     'name': 'constant.numeric.zapper'
   }
   {
-    'match': '\\b(?i:list|first|rest|conj|length|nth|let|import|print|println)\\b'
+    'match': '\\b(?:list|first|rest|conj|length|nth|let|print|println)\\b'
     'name': 'support.function.zapper'
   }
   {
-    'match': '\\b(?i:cond|fn|return)\\b'
+    'match': '\\b(?:cond|fn|return|ns|import)\\b'
     'name': 'keyword.control.zapper'
   }
   {
-    'match': '\\b(?i:=|<|>|<=|>=|\\+|\\*|\\/|\\/)\\b'
+    'match': '\\b(?:=|<|>|<=|>=|\\+|\\*|\\/|\\/)\\b'
     'name': 'keyword.operator.zapper'
   }
   {
-    'match': '\\b(?i:True|False)\\b'
+    'match': '\\b(?:True|False)\\b'
     'name': 'constant.language.zapper'
   }
   {
@@ -32,6 +32,23 @@
     '0':
       'name': 'punctuation.definition.string.end.zapper'
   'name': 'string.quoted.double.zapper'
+  'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.zapper'
+      }
+    ]
+  }
+  {
+  'begin': '\''
+  'beginCaptures':
+    '0':
+      'name': 'punctuation.definition.char.begin.zapper'
+  'end': '\''
+  'endCaptures':
+    '0':
+      'name': 'punctuation.definition.char.end.zapper'
+  'name': 'string.quoted.single.zapper'
   'patterns': [
       {
         'match': '\\\\.'
